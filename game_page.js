@@ -19,7 +19,7 @@ document.getElementById("player_answer").innerHTML = "Answer Turn - "+ player2_n
 function send() {
     get_number1 = document.getElementById("number1").value;
     get_number2 = document.getElementById("number2").value;
-
+    answer = Number(get_number1) *Number(get_number2);
     question_word = "<h4 id= 'number_display'> Q."+get_number1+" X " +get_number2+"</h4>";
     input_box =  "<br>Answer : <input type='text' id='input_check_box'>";
     check_button = "<br><br><button class='btn btn-info' onclick='check()' >Check</button>";
@@ -31,9 +31,8 @@ function send() {
 function check()
 {
     get_answer = document.getElementById("input_check_box").value;
-    answer = get_answer.toLowerCase();
-    console.log("answer in lower case - " + answer);
-    if (answer == word) 
+     
+    if (answer == get_answer) 
     {
         
         if (answer_turn == "player1") 
